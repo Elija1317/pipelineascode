@@ -3,6 +3,7 @@ pipeline{
     environment{
         name1 = "Raghu"
         name2 = "Madhavi"
+        name3 = "sunny"
     }
     stages{
         stage("Build"){
