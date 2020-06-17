@@ -5,10 +5,9 @@ pipeline{
                        agent any
                        options{
                                 skipDefaultCheckout()
+                                timestamps()
                               }
-                       options{
-                       timestamps()
-                       }
+                      
             steps{
               echo "Pipline Build is done!"
               }
