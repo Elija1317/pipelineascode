@@ -10,9 +10,9 @@ pipeline{
                 name3 = "Sunny"
             }
             steps{
-                echo "name1 $(name1)"
-                echo "name2 $(name2)"
-                echo "name3 $(name3)"
+                echo "name1 ${name1}"
+                echo "name2 ${name2}"
+                echo "name3 ${name3}"
                 
             }
         }
@@ -21,9 +21,9 @@ pipeline{
                 name4 = "pinky"
             }
             steps{
-            echo "name1 $(name1)"
-            echo "name2 $(name2)"
-            echo "name4 $(name4)"
+            echo "name1 ${name1}"
+            echo "name2 ${name2}"
+            echo "name4 ${name4}"
             }
         }
     }
