@@ -23,6 +23,7 @@ pipeline{
             steps{
             echo "name1 ${name1}"
             echo "name2 ${name2}"
+            echo "name3 ${name3}"   
             echo "name4 ${name4}"
             }
         }
