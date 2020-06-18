@@ -34,7 +34,7 @@ pipeline{
                 usernamepassword = credentials('usernamepassword')
             }
             steps{
-            echo "usernamepassword ${usernamepassword}
+            echo "usernamepassword ${usernamepassword}"
             echo "usernamepassword_USR ${usernamepassword_USR}"
             echo "usernamepassword_PSW ${usernamepassword_PWS}"
             }
