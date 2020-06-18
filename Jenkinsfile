@@ -36,7 +36,7 @@ pipeline{
             steps{
             echo "SOME_USERNAME_PASSWORD ${SOME_USERNAME_PASSWORD}"
             echo "SOME_USERNAME_PASSWORD_USR ${SOME_USERNAME_PASSWORD_USR}"
-            echo "SOME_USERNAME_PASSWORD_PSW ${SOME_USERNAME_PASSWORD_PWS}"
+            echo "SOME_USERNAME_PASSWORD_PSW ${SOME_USERNAME_PASSWORD_PSW}"
             }
         }
         
