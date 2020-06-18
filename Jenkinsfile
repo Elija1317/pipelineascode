@@ -17,43 +17,54 @@ pipeline{
         }
         stage('notdevlop'){
             when {
-				not{
-					environment name: 'DEPLOY_TO_dev', value: 'test'
-				}
-			}
-            steps{
+                    not{
+                          environment name: 'DEPLOY_TO_dev', value: 'test'
+                          }
+                  }
+             steps{
                 echo "Code is deployed to test"
-            }
-        }
-		stage('devlop'){
+                }
+             }
+        stage('devlop'){
             when {
-				
-					environment name: 'DEPLOY_TO_dev', value: 'test'
-				
-			}
+                      environment name: 'DEPLOY_TO_dev', value: 'test'
+                  }
             steps{
                 echo "Code is deployed to test"
             }
         }
         stage('sunny'){
-            when{
-                equals expected: 'sunny',actual: some_name
-            }
-            steps{
-                echo " name:${some_name}"
-            }
-        }
+                 when{
+                  equals expected: 'sunny',actual: some_name
+                    }
+                  steps{
+                    echo " name:${some_name}"
+                  }
+              }
         stage('version'){
             when {
-                expression{ 
-                version == "1.0"
-                       }
+              expression{
+              version == "1.0"
+               }
             }
-            steps{
-                echo "Building this version:${version}"
+          steps{
+          echo "Building this version:${version}"
             }
+          }
+        stage('AlloF'){
+          when{
+            allOf {
+                environment: 'DEPLOY_TO' , value: 'production'
+                environment: 'version' , value: '1.0'
+            }
+          }
+          steps{
+            echo "Artifact is deployed to production with allof"
+            echo "The Version ID is:  ${version}"
+          }
         }
-    }
+        }
 }
 
+               
 
