@@ -31,12 +31,12 @@ pipeline{
         }
         stage("env"){
             environment{
-                usernamepassword = credentials('usernamepassword')
+                SOME_USERNAME_PASSWORD = credentials('usernamepassword')
             }
             steps{
-            echo "usernamepassword ${usernamepassword}"
-            echo "usernamepassword_USR ${usernamepassword_USR}"
-            echo "usernamepassword_PSW ${usernamepassword_PWS}"
+            echo "SOME_USERNAME_PASSWORD ${SOME_USERNAME_PASSWORD}"
+            echo "SOME_USERNAME_PASSWORD_USR ${SOME_USERNAME_PASSWORD_USR}"
+            echo "SOME_USERNAME_PASSWORD_PSW ${SOME_USERNAME_PASSWORD_PWS}"
             }
         }
         
