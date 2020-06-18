@@ -4,6 +4,7 @@ pipeline{
           DEPLOY_TO = 'production'
           some_name = 'sunny'
           DEPLOY_TO_dev = 'devlop'
+          version ='1.0'
     }
     stages{
         stage('Build'){
@@ -14,7 +15,7 @@ pipeline{
                   echo "Code is deployed to production"
               }
         }
-        stage('notdevlop'){
+        stage('devlop'){
             when {
 				not{
 					environment name: 'DEPLOY_TO_dev', value: 'test'
@@ -40,6 +41,14 @@ pipeline{
             }
             steps{
                 echo " name:${some_name}"
+            }
+        }
+        stage('version'){
+            when {
+                version == "1.0"
+            }
+            steps{
+                echo "Building this version:${version}"
             }
         }
     }
