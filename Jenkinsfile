@@ -26,6 +26,7 @@ pipeline{
             echo "name2 ${name2}"
             echo "name3 ${name3}"   
             echo "name4 ${name4}"
+            sh "printenv"
             }
         }
     }
