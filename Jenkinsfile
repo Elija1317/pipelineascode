@@ -16,8 +16,20 @@ pipeline{
         }
         stage('devlop'){
             when {
-            environment name: 'DEPLOY_TO_dev', value: 'test'
+				not{
+					environment name: 'DEPLOY_TO_dev', value: 'test'
+				}
+			}
+            steps{
+                echo "Code is deployed to test"
             }
+        }
+		stage('devlop'){
+            when {
+				
+					environment name: 'DEPLOY_TO_dev', value: 'test'
+				
+			}
             steps{
                 echo "Code is deployed to test"
             }
@@ -32,3 +44,5 @@ pipeline{
         }
     }
 }
+
+
