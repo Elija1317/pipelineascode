@@ -14,7 +14,7 @@ pipeline{
                   echo "Code is deployed to production"
               }
         }
-        stage('devlop'){
+        stage('notdevlop'){
             when {
 				not{
 					environment name: 'DEPLOY_TO_dev', value: 'test'
