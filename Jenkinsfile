@@ -24,7 +24,7 @@ pipeline{
         }
         stage('sunny'){
             when{
-                equals expected: 'sunny',actual: 'some_name'
+                equals expected: 'sunny',actual: some_name
             }
             steps{
                 echo " name:${some_name}"
