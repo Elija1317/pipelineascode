@@ -54,8 +54,8 @@ pipeline{
         stage('AlloF'){
           when{
             allOf {
-                environment: 'DEPLOY_TO' , value: 'production'
-                environment: 'version' , value: '1.0'
+                environment name: 'DEPLOY_TO' , value: 'production'
+                environment name: 'version' , value: '1.0'
             }
           }
           steps{
