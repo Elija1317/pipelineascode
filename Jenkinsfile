@@ -45,7 +45,9 @@ pipeline{
         }
         stage('version'){
             when {
+                expression{ 
                 version == "1.0"
+                       }
             }
             steps{
                 echo "Building this version:${version}"
