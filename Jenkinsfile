@@ -1,21 +1,14 @@
 pipeline{
     agent any
     stages{
-        stage('Build Master'){
+        stage('Build Tag'){
             when{
-              branch 'master'
+              tag "v0.1-aplha"
             }
             steps{
-            echo "Building master branch"
+            echo "Building master branch with tag v0.1-aplha"
+
             }
-        }
-        stage('Build Dev'){
-          when{
-            branch 'dev'
-          }
-          steps{
-            echo "Building dev branch"
-          }
         }
     }
 }
