@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build Tag'){
             when{
-              tag "0.1"
+              tag "1.0"
             }
             steps{
             echo "Building master branch with tag v0.1-aplha"
