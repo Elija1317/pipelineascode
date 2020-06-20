@@ -5,7 +5,7 @@ pipeline{
               input{
                   message "Please specify environment"
                   ok "OK"
-                        submitter "dummyuser","admin"
+                        submitter "dummyuser@gmail.com,admin"
                         submitterParameter "whoIsSubmitter"
                   parameters{
                             string(name: 'environment', defaultValue: 'Dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
