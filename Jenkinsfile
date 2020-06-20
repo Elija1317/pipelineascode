@@ -6,7 +6,7 @@ pipeline{
               changelog '.*sample_text.*'
             }
             steps{
-            echo "Building master branch with tag 1.0"
+            echo "Building is executing based on change log"
             }
         }
     }
